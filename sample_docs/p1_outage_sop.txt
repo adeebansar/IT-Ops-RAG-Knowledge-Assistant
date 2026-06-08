@@ -1,0 +1,29 @@
+P1 OUTAGE SOP - IT OPERATIONS
+
+Purpose:
+This SOP defines how the IT Operations team responds to a Priority 1 outage.
+
+Definition:
+A P1 outage is a critical service disruption affecting business-critical systems, multiple users, customer-facing platforms, or revenue-impacting workflows.
+
+Initial Response:
+1. Acknowledge the incident within 5 minutes.
+2. Confirm user impact, affected systems, start time, and current symptoms.
+3. Assign an Incident Commander.
+4. Open a bridge call if the outage affects multiple teams.
+5. Notify Service Desk, Network Support, Application Support, and Business Stakeholders.
+
+Escalation:
+If the outage is not mitigated within 15 minutes, escalate to senior infrastructure support and the IT Operations Manager.
+If customer-facing services are affected, notify leadership and customer support leads.
+
+Communication:
+Send status updates every 30 minutes until service is restored.
+Each update should include impact, current action, owner, next update time, and known workaround.
+
+Resolution:
+After service restoration, validate with monitoring tools and affected users.
+Create a post-incident review within 2 business days.
+
+Post-Incident Review:
+Document root cause, timeline, business impact, missed alerts, corrective actions, and prevention steps.

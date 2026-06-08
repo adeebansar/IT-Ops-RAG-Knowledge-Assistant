@@ -1,0 +1,23 @@
+VPN ACCESS AND CONNECTIVITY SOP
+
+Common Symptoms:
+Users may report login failures, timeout errors, MFA loops, slow connection, or inability to reach internal applications.
+
+Triage Steps:
+1. Confirm whether the issue affects one user or multiple users.
+2. Check VPN service status and authentication logs.
+3. Validate the user's account status, group membership, MFA enrollment, and password expiration.
+4. Ask the user to test from a different network if possible.
+5. Confirm whether the user can access cloud applications outside VPN.
+
+Escalation Rules:
+Single-user issues go to Access Support.
+Multiple-user issues go to Network Support.
+Authentication failures after MFA validation go to Identity and Access Management.
+Potential suspicious login activity goes to Security Review.
+
+Recommended Fixes:
+Clear cached credentials, reset MFA registration, update VPN client, confirm firewall rules, and verify device compliance.
+
+SLA:
+High impact VPN incidents must be acknowledged within 15 minutes and updated every 60 minutes.

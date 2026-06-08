@@ -1,0 +1,25 @@
+USER ACCESS REQUEST POLICY
+
+Purpose:
+This policy defines approval and fulfillment steps for system access requests.
+
+Request Intake:
+All access requests must be submitted through the IT service portal.
+Email or chat requests should be redirected to the portal unless there is an approved emergency exception.
+
+Approval:
+Manager approval is required for standard access.
+Application owner approval is required for privileged access.
+Security approval is required for admin access, finance systems, production systems, and regulated data access.
+
+Fulfillment:
+Access Support validates user identity, role, department, and approval evidence before granting access.
+All changes must be documented in the ticket.
+
+SLA:
+Standard access requests should be completed within 2 business days after approval.
+Privileged access requests should be completed within 3 business days after all approvals are received.
+
+Audit:
+Access records must be reviewed monthly.
+Terminated users must be removed from all systems within 24 hours of HR notification.

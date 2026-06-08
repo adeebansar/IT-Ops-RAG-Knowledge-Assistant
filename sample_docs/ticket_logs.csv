@@ -1,0 +1,9 @@
+ticket_id,category,priority,symptom,recommended_route,resolution_notes
+INC-1001,Access,P2,User locked out after password reset,ACCESS_SUPPORT,Reset MFA registration and cleared cached credentials
+INC-1002,Network,P1,Multiple users unable to connect to VPN,NETWORK_SUPPORT,VPN gateway service restarted after confirming regional impact
+INC-1003,Hardware,P3,Laptop battery drains within one hour,ASSET_SUPPORT,Device flagged for refresh due to age over 4 years
+INC-1004,Security,P1,Suspicious login from unknown country,SECURITY_REVIEW,Account disabled and security investigation opened
+INC-1005,Application,P2,Payment portal loading slowly,APPLICATION_SUPPORT,Database query identified as root cause
+INC-1006,Reporting,P3,Power BI dashboard missing latest SLA data,DATA_REPORTING_SUPPORT,Dataset refresh schedule corrected
+INC-1007,Onboarding,P3,New hire missing application access,ACCESS_SUPPORT,Manager approval verified and access provisioned
+INC-1008,Knowledge Management,P4,Agents cannot find password reset SOP,KNOWLEDGE_MANAGEMENT,Article tags updated and SOP linked in service portal

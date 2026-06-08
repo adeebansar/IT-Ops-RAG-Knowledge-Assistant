@@ -1,0 +1,27 @@
+ASSET INVENTORY AND LIFECYCLE POLICY
+
+Purpose:
+This policy defines how IT assets are tracked, refreshed, and retired.
+
+Asset Fields Required:
+Every laptop, desktop, monitor, docking station, and mobile device must have an asset tag, serial number, assigned user, location, purchase date, warranty date, and device status.
+
+Lifecycle Status:
+- In Stock
+- Assigned
+- In Repair
+- Lost or Missing
+- Pending Return
+- Retired
+
+Refresh Rules:
+Laptops older than 4 years should be reviewed for replacement.
+Devices with repeated hardware incidents should be flagged for early refresh.
+Devices out of warranty must be reviewed before reassignment.
+
+Inventory Audit:
+A quarterly inventory audit must compare ServiceNow records, physical inventory, and manager ownership records.
+Missing assets must be escalated to the IT Asset Manager within 5 business days.
+
+Reporting:
+Monthly asset reports should show aging devices, missing devices, warranty expiration, and high-risk departments.

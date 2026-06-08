@@ -1,0 +1,31 @@
+OUTAGE NOTES - PAYMENT PORTAL LATENCY
+
+Date:
+2026-05-14
+
+Incident Summary:
+Users reported slow response times in the internal payment portal.
+The issue affected approximately 38 users across Finance and Customer Support.
+
+Timeline:
+09:10 - First ticket received.
+09:15 - Monitoring alert confirmed high API latency.
+09:20 - Incident Commander assigned.
+09:25 - Application Support and Database teams joined bridge.
+09:40 - Database CPU spike identified.
+10:05 - Query optimization applied.
+10:30 - Service returned to normal.
+11:00 - Monitoring confirmed stable performance.
+
+Root Cause:
+A reporting query caused excessive database load during business hours.
+
+Corrective Actions:
+Move heavy reporting jobs to off-peak hours.
+Add database CPU alerting threshold at 75%.
+Create runbook for payment portal latency.
+Review dashboard refresh schedules.
+
+Business Impact:
+Customer Support experienced slower case handling.
+Finance users had delayed payment verification.
