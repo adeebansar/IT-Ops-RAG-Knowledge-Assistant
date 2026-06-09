@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">IT Operations RAG Knowledge Assistant Pipeline</title>
+  <desc id="desc">Infographic showing fake IT documents loaded, chunked, embedded, stored in Chroma, retrieved by question, answered, and verified with source chunks.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 800 42px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 19px Arial, sans-serif; fill: #475569; }
+      .section { font: 800 20px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 15px Arial, sans-serif; fill: #334155; }
+      .small { font: 400 13px Arial, sans-serif; fill: #475569; }
+      .note { font: 700 14px Arial, sans-serif; fill: #075985; }
+      .card { fill: #ffffff; stroke: #dbe4ef; stroke-width: 2; rx: 18; filter: url(#shadow); }
+      .mini { fill: #eff6ff; stroke: #bfdbfe; stroke-width: 1.5; rx: 12; }
+      .verify { fill: #ecfdf5; stroke: #86efac; stroke-width: 2; rx: 18; filter: url(#shadow); }
+      .warn { fill: #fff7ed; stroke: #fed7aa; stroke-width: 2; rx: 18; filter: url(#shadow); }
+      .line { stroke: #2563eb; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke: #64748b; stroke-width: 3; stroke-dasharray: 8 8; fill: none; marker-end: url(#arrow); }
+      .iconCircle { fill: #dbeafe; stroke: #93c5fd; stroke-width: 2; }
+      .accent { fill: #2563eb; }
+      .green { fill: #16a34a; }
+      .orange { fill: #ea580c; }
+      .slate { fill: #475569; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1400" height="900"/>
+
+  <text class="title" x="70" y="78">IT Operations RAG Knowledge Assistant</text>
+  <text class="subtitle" x="72" y="114">How the app turns fake SOPs, tickets, outage notes, asset records, and policies into source-backed answers.</text>
+
+  <rect class="card" x="70" y="165" width="250" height="190"/>
+  <circle class="iconCircle" cx="105" cy="205" r="20"/>
+  <path d="M96 194h14l8 8v20H96z" fill="#2563eb"/>
+  <path d="M110 194v9h8" fill="none" stroke="#bfdbfe" stroke-width="2"/>
+  <text class="label" x="135" y="211">1. Fake IT Docs</text>
+  <text class="body" x="95" y="253">Sample data only:</text>
+  <text class="small" x="95" y="280">TXT SOPs and policies</text>
+  <text class="small" x="95" y="304">CSV ticket logs</text>
+  <text class="small" x="95" y="328">PDF asset notes</text>
+
+  <rect class="card" x="390" y="165" width="250" height="190"/>
+  <circle class="iconCircle" cx="425" cy="205" r="20"/>
+  <path d="M413 209h24M413 198h24M413 220h18" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+  <text class="label" x="455" y="211">2. Load Files</text>
+  <text class="body" x="415" y="253">The app extracts text from</text>
+  <text class="small" x="415" y="280">documents and keeps metadata:</text>
+  <text class="small" x="415" y="306">source file, row, page, type</text>
+
+  <rect class="card" x="710" y="165" width="250" height="190"/>
+  <circle class="iconCircle" cx="745" cy="205" r="20"/>
+  <rect x="733" y="194" width="25" height="10" fill="#2563eb" rx="3"/>
+  <rect x="733" y="209" width="20" height="10" fill="#2563eb" rx="3"/>
+  <rect x="733" y="224" width="29" height="10" fill="#2563eb" rx="3"/>
+  <text class="label" x="775" y="211">3. Split Chunks</text>
+  <text class="body" x="735" y="253">Large docs become smaller</text>
+  <text class="small" x="735" y="280">searchable sections.</text>
+  <text class="small" x="735" y="306">Demo retrieval uses top 3</text>
+  <text class="small" x="735" y="330">chunks by default.</text>
+
+  <rect class="card" x="1030" y="165" width="250" height="190"/>
+  <circle class="iconCircle" cx="1065" cy="205" r="20"/>
+  <circle cx="1057" cy="198" r="5" class="accent"/>
+  <circle cx="1074" cy="204" r="5" class="accent"/>
+  <circle cx="1062" cy="219" r="5" class="accent"/>
+  <path d="M1057 198l17 6M1074 204l-12 15" stroke="#2563eb" stroke-width="3"/>
+  <text class="label" x="1095" y="211">4. Embed</text>
+  <text class="body" x="1055" y="253">Each chunk becomes a vector</text>
+  <text class="small" x="1055" y="280">so similar questions and text</text>
+  <text class="small" x="1055" y="306">can be matched.</text>
+
+  <path class="line" d="M320 260H382"/>
+  <path class="line" d="M640 260H702"/>
+  <path class="line" d="M960 260H1022"/>
+
+  <rect class="card" x="575" y="430" width="250" height="190"/>
+  <circle class="iconCircle" cx="610" cy="470" r="20"/>
+  <ellipse cx="610" cy="462" rx="15" ry="6" fill="#2563eb"/>
+  <path d="M595 462v20c0 3 7 6 15 6s15-3 15-6v-20" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <text class="label" x="640" y="476">5. Chroma Store</text>
+  <text class="body" x="600" y="518">Vectors and metadata are</text>
+  <text class="small" x="600" y="545">stored locally in Chroma.</text>
+  <text class="small" x="600" y="571">Metadata links answers back</text>
+  <text class="small" x="600" y="595">to source files.</text>
+
+  <path class="line" d="M1155 355 C1155 425 825 385 735 425"/>
+
+  <rect class="card" x="70" y="430" width="250" height="190"/>
+  <circle class="iconCircle" cx="105" cy="470" r="20"/>
+  <circle cx="101" cy="466" r="9" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <path d="M111 476l10 10" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <text class="label" x="135" y="476">6. User Question</text>
+  <text class="body" x="95" y="518">Example:</text>
+  <text class="small" x="95" y="545">"What is the escalation</text>
+  <text class="small" x="95" y="571">process for a P1 outage?"</text>
+
+  <rect class="card" x="390" y="430" width="250" height="190"/>
+  <circle class="iconCircle" cx="425" cy="470" r="20"/>
+  <path d="M415 470h20M425 460v20" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <text class="label" x="455" y="476">7. Retrieve Top K</text>
+  <text class="body" x="415" y="518">Vector search compares the</text>
+  <text class="small" x="415" y="545">question to every chunk.</text>
+  <text class="small" x="415" y="571">The app returns the most</text>
+  <text class="small" x="415" y="595">relevant source chunks.</text>
+
+  <path class="line" d="M320 525H382"/>
+  <path class="line" d="M640 525H567"/>
+
+  <rect class="warn" x="880" y="430" width="250" height="190"/>
+  <circle class="iconCircle" cx="915" cy="470" r="20"/>
+  <path d="M906 462h18v18h-18z" fill="#ea580c" rx="4"/>
+  <path d="M911 467h8M911 473h8" stroke="#fff7ed" stroke-width="2"/>
+  <text class="label" x="945" y="476">8. Answer</text>
+  <text class="body" x="905" y="518">Without an API key:</text>
+  <text class="small" x="905" y="545">retrieval-only answer.</text>
+  <text class="body" x="905" y="577">With an API key:</text>
+  <text class="small" x="905" y="604">optional generated answer.</text>
+
+  <path class="line" d="M825 525H872"/>
+
+  <rect class="verify" x="1080" y="665" width="250" height="145"/>
+  <circle cx="1115" cy="705" r="20" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <path d="M1105 706l7 7 15-18" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="label" x="1145" y="711">9. Verify Sources</text>
+  <text class="body" x="1105" y="750">The user inspects exact</text>
+  <text class="small" x="1105" y="776">source chunks, filenames,</text>
+  <text class="small" x="1105" y="800">rows, and PDF pages.</text>
+
+  <path class="line" d="M1030 620 C1030 690 1070 675 1075 720"/>
+
+  <rect class="mini" x="70" y="705" width="260" height="105"/>
+  <text class="section" x="95" y="740">Why chunks?</text>
+  <text class="small" x="95" y="768">The user does not search chunks manually.</text>
+  <text class="small" x="95" y="792">The system searches all chunks and shows</text>
+  <text class="small" x="95" y="816">only the few most relevant sections.</text>
+
+  <rect class="mini" x="390" y="705" width="310" height="105"/>
+  <text class="section" x="415" y="740">Important limitation</text>
+  <text class="small" x="415" y="768">RAG reduces hallucination risk, but retrieval</text>
+  <text class="small" x="415" y="792">can still pick the wrong chunk. Source display</text>
+  <text class="small" x="415" y="816">makes the answer checkable.</text>
+
+  <rect class="mini" x="760" y="705" width="260" height="105"/>
+  <text class="section" x="785" y="740">Demo setting</text>
+  <text class="small" x="785" y="768">Top K = 3 balances relevance and readability.</text>
+  <text class="small" x="785" y="792">Use more chunks for broader questions.</text>
+
+  <text class="note" x="70" y="865">Public portfolio safety: fake data only. No real company tickets, policies, customer data, credentials, or API keys.</text>
+</svg>
