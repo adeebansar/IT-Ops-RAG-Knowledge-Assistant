@@ -61,7 +61,9 @@ with st.sidebar:
             st.error("No documents found. Use the sample docs or upload files first.")
         else:
             with st.spinner("Building embeddings and saving chunks to Chroma..."):
-                vector_store, chunks = build_vector_store(docs)
+                vector_store, chunks, chroma_dir = build_vector_store(docs)
+            st.session_state["vector_store"] = vector_store
+            st.session_state["chroma_dir"] = str(chroma_dir)
             st.session_state["index_ready"] = True
             st.success(f"Indexed {len(docs)} document sections into {len(chunks)} chunks.")
 
@@ -82,7 +84,9 @@ top_k = st.slider("Number of source chunks to retrieve", min_value=2, max_value=
 if st.button("Ask", type="primary") and question:
     try:
         with st.spinner("Retrieving relevant source chunks..."):
-            vector_store = load_vector_store()
+            vector_store = st.session_state.get("vector_store")
+            if vector_store is None:
+                vector_store = load_vector_store(st.session_state.get("chroma_dir"))
             retrieved_docs = vector_store.similarity_search(question, k=top_k)
 
         if not retrieved_docs:

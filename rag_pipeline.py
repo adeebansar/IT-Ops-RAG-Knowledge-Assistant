@@ -1,7 +1,7 @@
 import os
-import shutil
 import hashlib
 import math
+import uuid
 from pathlib import Path
 from typing import List
 
@@ -146,23 +146,24 @@ def build_vector_store(documents: List[Document]):
     chunks = split_documents(documents)
     embeddings = get_embeddings()
 
-    if CHROMA_DIR.exists():
-        shutil.rmtree(CHROMA_DIR)
     CHROMA_DIR.mkdir(exist_ok=True)
+    persist_directory = CHROMA_DIR / f"index_{uuid.uuid4().hex}"
 
     vector_store = Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
-        persist_directory=str(CHROMA_DIR),
+        persist_directory=str(persist_directory),
         collection_name=COLLECTION_NAME,
     )
-    return vector_store, chunks
+    return vector_store, chunks, persist_directory
 
 
-def load_vector_store():
+def load_vector_store(persist_directory: Path | str | None = None):
     embeddings = get_embeddings()
+    if persist_directory is None:
+        persist_directory = CHROMA_DIR
     return Chroma(
-        persist_directory=str(CHROMA_DIR),
+        persist_directory=str(persist_directory),
         embedding_function=embeddings,
         collection_name=COLLECTION_NAME,
     )
