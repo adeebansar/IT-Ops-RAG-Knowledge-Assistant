@@ -3,6 +3,13 @@ python-dotenv
 pandas
 pypdf
 chromadb
+protobuf==6.33.6
+opentelemetry-api==1.42.1
+opentelemetry-sdk==1.42.1
+opentelemetry-proto==1.42.1
+opentelemetry-exporter-otlp-proto-common==1.42.1
+opentelemetry-exporter-otlp-proto-grpc==1.42.1
+opentelemetry-semantic-conventions==0.63b1
 langchain
 langchain-core
 langchain-text-splitters
