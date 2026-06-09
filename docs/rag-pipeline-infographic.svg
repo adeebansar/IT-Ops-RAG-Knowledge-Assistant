@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
   <title id="title">IT Operations RAG Knowledge Assistant Pipeline</title>
-  <desc id="desc">Infographic showing fake IT documents loaded, chunked, embedded, stored in Chroma, retrieved by question, answered, and verified with source chunks.</desc>
+  <desc id="desc">Infographic showing sample IT documents loaded, chunked, embedded, stored in Chroma, retrieved by question, answered, and verified with source chunks.</desc>
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
       <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
@@ -34,13 +34,13 @@
   <rect class="bg" width="1400" height="900"/>
 
   <text class="title" x="70" y="78">IT Operations RAG Knowledge Assistant</text>
-  <text class="subtitle" x="72" y="114">How the app turns fake SOPs, tickets, outage notes, asset records, and policies into source-backed answers.</text>
+  <text class="subtitle" x="72" y="114">How the app turns sample SOPs, tickets, outage notes, asset records, and policies into source-backed answers.</text>
 
   <rect class="card" x="70" y="165" width="250" height="190"/>
   <circle class="iconCircle" cx="105" cy="205" r="20"/>
   <path d="M96 194h14l8 8v20H96z" fill="#2563eb"/>
   <path d="M110 194v9h8" fill="none" stroke="#bfdbfe" stroke-width="2"/>
-  <text class="label" x="135" y="211">1. Fake IT Docs</text>
+  <text class="label" x="135" y="211">1. Sample IT Docs</text>
   <text class="body" x="95" y="253">Sample data only:</text>
   <text class="small" x="95" y="280">TXT SOPs and policies</text>
   <text class="small" x="95" y="304">CSV ticket logs</text>
@@ -152,5 +152,5 @@
   <text class="small" x="785" y="768">Top K = 3 balances relevance and readability.</text>
   <text class="small" x="785" y="792">Use more chunks for broader questions.</text>
 
-  <text class="note" x="70" y="865">Public portfolio safety: fake data only. No real company tickets, policies, customer data, credentials, or API keys.</text>
+  <text class="note" x="70" y="865">Public portfolio safety: sample practice data only. No real company tickets, policies, customer data, credentials, or API keys.</text>
 </svg>

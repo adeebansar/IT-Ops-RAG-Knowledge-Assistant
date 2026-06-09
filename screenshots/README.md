@@ -8,4 +8,4 @@ Capture these screenshots after running the app locally:
 4. `04-source-chunks.png` - expanded `Source Chunks Used` section.
 5. `05-pdf-source.png` - answer showing a PDF or asset inventory source.
 
-Use fake sample documents only. Do not capture real company data, real tickets, API keys, or private uploaded files.
+Use sample practice documents only. Do not capture real company data, real tickets, API keys, or private uploaded files.

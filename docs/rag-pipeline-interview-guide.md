@@ -6,13 +6,13 @@ IT teams often have SOPs, outage notes, ticket logs, asset policies, and access 
 
 ## Goal
 
-Build a small knowledge assistant that can search fake IT Operations documents, answer questions, and show the source chunks used for each answer.
+Build a small knowledge assistant that can search sample IT Operations documents, answer questions, and show the source chunks used for each answer.
 
 ## Architecture
 
 ```mermaid
 flowchart TD
-    A["Fake IT Operations documents"] --> B["Streamlit upload"]
+    A["Sample IT Operations documents"] --> B["Streamlit upload"]
     B --> C["TXT / CSV / PDF loaders"]
     C --> D["Chunk splitter"]
     D --> E["Embedding function"]
@@ -35,7 +35,7 @@ flowchart TD
 
 ## Build Process
 
-1. Created fake IT Operations sample documents only.
+1. Created sample IT Operations practice documents only.
 2. Built loaders for TXT, CSV, and PDF files.
 3. Split large document text into smaller chunks.
 4. Converted chunks into vectors with a local embedding function.
@@ -49,8 +49,8 @@ flowchart TD
 ## Problems Solved
 
 - Kept the app useful without an API key.
-- Avoided real company data by using fake IT Operations docs only.
-- Added PDF support and tested it with a fake PDF sample.
+- Avoided real company data by using sample IT Operations docs only.
+- Added PDF support and tested it with a sample PDF.
 - Excluded `.env`, uploaded documents, virtual environments, and local Chroma files from GitHub.
 - Separated the RAG pipeline logic from the Streamlit UI so the core logic can be tested.
 
@@ -70,8 +70,8 @@ flowchart TD
 
 ## Resume-Ready Explanation
 
-Built a Python and Streamlit RAG app that ingests fake IT Operations documents, chunks them, embeds them, stores them in Chroma, retrieves relevant context for user questions, and shows the source chunks used for each answer.
+Built a Python and Streamlit RAG app that ingests sample IT Operations documents, chunks them, embeds them, stores them in Chroma, retrieves relevant context for user questions, and shows the source chunks used for each answer.
 
 ## 60-Second Interview Answer
 
-"I built an IT Operations RAG Knowledge Assistant as a beginner portfolio project. The problem is that IT teams often have SOPs, outage notes, ticket logs, asset policies, and access policies spread across documents. My goal was to make those documents searchable and answerable with sources. The app uses Streamlit for the interface. It loads fake TXT, CSV, and PDF documents, splits them into chunks, converts those chunks into embeddings, and stores them in Chroma. When a user asks a question, the app searches Chroma for the most relevant chunks. If an API key exists, it uses those chunks to generate a grounded answer. If no key exists, it still works in retrieval-only mode. The most important safety decision was using fake data only and excluding `.env`, uploaded private docs, and local database files from GitHub."
+"I built an IT Operations RAG Knowledge Assistant as a beginner portfolio project. The problem is that IT teams often have SOPs, outage notes, ticket logs, asset policies, and access policies spread across documents. My goal was to make those documents searchable and answerable with sources. The app uses Streamlit for the interface. It loads sample TXT, CSV, and PDF documents, splits them into chunks, converts those chunks into embeddings, and stores them in Chroma. When a user asks a question, the app searches Chroma for the most relevant chunks. If an API key exists, it uses those chunks to generate a grounded answer. If no key exists, it still works in retrieval-only mode. The most important safety decision was using sample practice data only and excluding `.env`, uploaded private docs, and local database files from GitHub."

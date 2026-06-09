@@ -1,12 +1,12 @@
 # IT Operations RAG Knowledge Assistant
 
-A Streamlit app that searches fake IT Operations documents and shows the source chunks used to answer each question.
+A Streamlit app that searches sample IT Operations documents and shows the source chunks used to answer each question.
 
 ## Problem
 
 IT support teams often have SOPs, outage notes, ticket logs, asset policies, and access policies spread across different files. This project turns those documents into a searchable knowledge base so support questions can be answered with visible sources.
 
-This is a public portfolio project. It uses fake sample documents only.
+This is a public portfolio project. It uses sample practice documents only.
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ This is a public portfolio project. It uses fake sample documents only.
 
 ## Core Features
 
-- Loads fake TXT, CSV, and PDF IT Operations documents.
+- Loads sample TXT, CSV, and PDF IT Operations documents.
 - Splits documents into searchable chunks.
 - Stores embeddings and source metadata in Chroma.
 - Retrieves relevant chunks for IT support questions.
@@ -31,7 +31,7 @@ This is a public portfolio project. It uses fake sample documents only.
 
 ```mermaid
 flowchart LR
-    A["Fake IT docs"] --> B["Load TXT, CSV, PDF"]
+    A["Sample IT docs"] --> B["Load TXT, CSV, PDF"]
     B --> C["Split into chunks"]
     C --> D["Create embeddings"]
     D --> E["Store in Chroma"]

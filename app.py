@@ -20,14 +20,14 @@ st.set_page_config(
 
 st.title("IT Operations RAG Knowledge Assistant")
 st.caption(
-    "Upload fake SOPs, outage notes, ticket logs, asset notes, or policy docs. "
+    "Upload sample SOPs, outage notes, ticket logs, asset notes, or policy docs. "
     "Ask questions and inspect the exact source chunks used."
 )
 
 
 with st.sidebar:
     st.header("Build Knowledge Base")
-    st.write("Use fake sample docs first. Only upload non-sensitive IT Operations practice files.")
+    st.write("Use the sample docs first. Only upload non-sensitive IT Operations practice files.")
 
     uploaded_files = st.file_uploader(
         "Upload TXT, CSV, or PDF files",
