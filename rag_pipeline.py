@@ -36,11 +36,9 @@ SAMPLE_DIR = APP_DIR / "sample_docs"
 CHROMA_DIR = APP_DIR / "chroma_db"
 COLLECTION_NAME = "itops_knowledge"
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-USE_HUGGINGFACE_EMBEDDINGS = os.getenv("USE_HUGGINGFACE_EMBEDDINGS", "").lower() in {
-    "1",
-    "true",
-    "yes",
-}
+# Real semantic embeddings are used by default; set FORCE_LOCAL_EMBEDDINGS=1 to
+# force the lightweight offline fallback (e.g. for fast local testing).
+FORCE_LOCAL_EMBEDDINGS = os.getenv("FORCE_LOCAL_EMBEDDINGS", "").lower() in {"1", "true", "yes"}
 
 UPLOAD_DIR.mkdir(exist_ok=True)
 SAMPLE_DIR.mkdir(exist_ok=True)
@@ -73,12 +71,12 @@ class LocalHashEmbeddings(Embeddings):
 
 
 def get_embeddings():
-    if not USE_HUGGINGFACE_EMBEDDINGS:
+    """Prefer real semantic embeddings (sentence-transformers); fall back to the
+    offline hash embedder only if the library/model is unavailable, so the demo
+    never crashes."""
+    if FORCE_LOCAL_EMBEDDINGS or HuggingFaceEmbeddings is None:
         return LocalHashEmbeddings()
-
     try:
-        if HuggingFaceEmbeddings is None:
-            raise RuntimeError("langchain-huggingface is not installed")
         return HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
     except Exception:
         return LocalHashEmbeddings()

@@ -15,3 +15,5 @@ langchain-core
 langchain-text-splitters
 langchain-chroma
 langchain-openai
+langchain-huggingface
+sentence-transformers>=3.0
